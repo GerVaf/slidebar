@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Boxicons CSS -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="slide-bar close">
+        <div class="logo-details">
+            <i class='bx bxl-c-plus-plus text-light'></i>
+            <span class="text-light">Coding Lab</span>
+        </div>
+        <ul class="nav-links showMenu ">
+            <li>
+                <a href="">
+                    <i class='bx bxs-dashboard' ></i>
+                    <span class="link-name">Dashboard</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="">Dashbord</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="">
+                        <i class='bx bxs-collection' ></i>
+                        <span class="link-name close">Category</span>
+                    </a>
+                    <i class='bx bx-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link-name" href="">Category</a></li>
+                    <li><a  href="">Web Desgin</a></li>
+                    <li><a  href="">Login Form</a></li>
+                    <li><a  href="">Card Desgin</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="">
+                        <i class='bx bx-book'></i>
+                        <span class="link-name">Post</span>
+                    </a>
+                    <i class='bx bx-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link-name" href="">Post</a></li>
+                    <li><a  href="">HTML and CSS</a></li>
+                    <li><a  href="">Javascript</a></li>
+                    <li><a  href="">PHP and MySQL</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">
+                    <i class='bx bxs-dashboard' ></i>
+                    <span class="link-name">Analytics</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="">Analytics</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">
+                    <i class='bx bxs-dashboard' ></i>
+                    <span class="link-name">Chart</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="">Chart</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="">
+                        <i class='bx bx-book'></i>
+                        <span class="link-name">Plugins</span>
+                    </a>
+                    <i class='bx bx-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link-name" href="">Plugins</a></li>
+                    <li><a  href="">HTML and CSS</a></li>
+                    <li><a  href="">Javascript</a></li>
+                    <li><a  href="">PHP and MySQL</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">
+                    <i class='bx bxs-dashboard' ></i>
+                    <span class="link-name">Explorie</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="">Explorie</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">
+                    <i class='bx bxs-dashboard' ></i>
+                    <span class="link-name">History</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="">History</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">
+                    <i class='bx bxs-dashboard' ></i>
+                    <span class="link-name">Setting</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="">Setting</a></li>
+                </ul>
+                <li>
+                    <div class="PF">
+                        <div class="profile-details">
+                            <div class="profile-content">
+                                <img src="./images/_.jpeg" alt="">
+                            </div>
+                            <div class="name-job">
+                                <div class="name">Angry Cat</div>
+                                <div class="job">Web Desgin</div>
+                            </div>
+                            <i class='bx bx-log-out'></i>
+                        </div>
+                    </div>
+                </li>
+            </li>
+        </ul>
+    </div>
+    <div class="home-section">
+        <div class="home-menu">
+            <i class='bx bx-menu'></i>
+            <span class="text">drop down slide bar</span>
+        </div>
+    </div>
+    <script>
+        let arrow = document.querySelectorAll('.arrow');
+        for (let i=0 ; i< arrow.length ; i++){
+            arrow[i].addEventListener("click",(e)=>{
+                let arrowParent = e.target.parentElement.parentElement;
+                arrowParent.classList.toggle("showMenu")
+            });
+        };
+
+        let sideBar = document.querySelector(".slide-bar");
+        let sideBarBtn = document.querySelector(".bx-menu");
+
+        console.log(sideBarBtn)
+        sideBarBtn.addEventListener("click", ()=>{
+            sideBar.classList.toggle("close");
+        });
+
+    </script>
+</body>
+</html>
